@@ -1,0 +1,101 @@
+[[plugins]] #BASIC PLUGIN
+repo = 'Shougo/dein.vim'
+                                                                    
+#--------------------------------------------------------------------
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+#--------------------------------------------------------------------
+# SNIPPET
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+#--------------------------------------------------------------------
+# FILE TYPE
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+dependes = ['Shougo/context_filetype.vim']
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+#--------------------------------------------------------------------
+# SYNTACS
+[[plugins]] # TOML
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # pep8 check for python
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['markdown', 'mkd']
+
+#--------------------------------------------------------------------
+# COLOR SCHEME
+[[plugins]] 
+repo = 'tomasr/molokai'
+hook_add = '''
+  set background=dark
+  set t_Co=256
+  colorscheme molokai
+  highlight Normal ctermbg=NONE
+  highlight Comment ctermfg=gray
+'''
+[[plugins]] # COLOR SCHEME FOR STATUS LINE
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+    \ 'colorscheme': 'wombat'
+    \ }
+  set laststatus=2
+'''
+
+#--------------------------------------------------------------------
+# COPY and PASTE
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+hook_add = '''
+  nmap p <Plug>(yankround-p)
+  nmap P <Plug>(yankround-P)
+  nmap gp <Plug>(yankround-gp)
+  nmap gP <Plug>(yankround-gP)
+  nmap <C-p> <Plug>(yankround-prev)
+  nmap <C-n> <Plug>(yankround-next)
+  let g:yankround_max_history = 50
+  nnoremap <silent>hy :<C-u>Unite yankround<CR> # Display yank history
+'''
+depends = 'unite.vim'
+
+#--------------------------------------------------------------------
+# VISUAL MODE
+[[plugins]]
+# wrap codes in <str> by S<str> in Vmode: e.g. <str> = "
+# unwrap codes in <str> by ds<str> or cs<str><new str> in Normal mode
+repo = 'tpope/vim-surround'
+
+#--------------------------------------------------------------------
+# TEXTOBJ (V-mode)
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]] # ae, ai: Select all of buffer
+repo = 'kana/vim-textobj-entire'
+depends = 'vim-textobj-user'
+
+[[plugins]] # al, ai: Select a line
+repo = 'kana/vim-textobj-line'
+depends = 'vim-textobj-user'
+
+[[plugins]] # ai, ii: select an indent
+repo = 'kana/vim-textobj-indent'
+depends = 'vim-textobj-user'
+
+#--------------------------------------------------------------------
+# HELP
+[[plugins]]
+repo = 'Shougo/unite-help'
+on_source = 'unite.vim'
