@@ -55,6 +55,8 @@ set backspace=indent,eol,start
 " To avoid an error message: E21 in buffer
 set modifiable
 set write
+" Turn vim's standard folding config OFF
+set nofoldenable
 "-----------------------------------------------------------------------
 " display 
 "-----------------------------------------------------------------------
