@@ -81,10 +81,10 @@ set scrolloff=4
 "-----------------------------------------------------------------------
 set mouse=a
 " Move among windows by Ctrl + hjkl
-nnoremap <C-h> <C-w>h|
-nnoremap <C-j> <C-w>j|
-nnoremap <C-k> <C-w>k|
-nnoremap <C-l> <C-w>l|
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 "-----------------------------------------------------------------------
 " buffer
 "-----------------------------------------------------------------------
