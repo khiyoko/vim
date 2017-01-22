@@ -2,7 +2,7 @@
 repo = 'Shougo/dein.vim'
                                                                     
 #--------------------------------------------------------------------
-[[plugins]]
+#[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
@@ -94,6 +94,16 @@ depends = 'vim-textobj-user'
 repo = 'kana/vim-textobj-indent'
 depends = 'vim-textobj-user'
 
+#--------------------------------------------------------------------
+# COMMENT
+# vim-commentary
+[[plugins]]
+repo = 'tpope/vim-commentary'
+hook_add = '''
+  autocmd FileType python setlocal commentstring=#\ %s
+  autocmd FileType sh setlocal commentstring=#\ %s
+'''
+ 
 #--------------------------------------------------------------------
 # HELP
 [[plugins]]

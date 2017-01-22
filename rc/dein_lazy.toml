@@ -37,14 +37,6 @@ hook_add = '''
 '''
 hook_source = 'source ~/.vim/rc/plugins/jedi-vim.rc.vim'
 
-# vim-commentary
-[[plugins]]
-repo = 'tpope/vim-commentary'
-hook_add = '''
-  autocmd FileType python setlocal commentstring=#\ %s
-'''
-on_ft = 'python'
-
 #--------------------------------------------------------------------
 # textobj
 [[plugins]]
