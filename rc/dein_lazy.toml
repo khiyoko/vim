@@ -58,4 +58,7 @@ hook_add = '''
 hook_source = 'source ~/.vim/rc/plugins/vim_quickrun.rc.vim'
 
 #--------------------------------------------------------------------
-
+# stan
+[[plugins]]
+repo = 'maverickg/stan.vim'
+on_ft = 'stan'
