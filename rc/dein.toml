@@ -8,8 +8,8 @@ build = 'make'
 
 #--------------------------------------------------------------------
 # SNIPPET
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
 
 #--------------------------------------------------------------------
 # FILE TYPE
